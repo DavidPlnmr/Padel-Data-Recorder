@@ -1,0 +1,15 @@
+Non exhaustive list of things to do in the future:
+- Add a way to immediately download the youtube from URL in the GUI, then it will store in any file here
+- Make the keys to use indicating shots more intuitive (idk it seems so weird to me the ones used)
+- Indicate who's the left and who's the right player in the GUI to get more information.
+- Make a slow mo mode of the video (using a button or a key?)
+- When entering an event, add the possibility to indicate what kind of shot it is :
+    - Serve
+    - Volley
+    - Lob
+    - Smash
+    - Bandeja
+    - Vibora (maybe in the same category as bandeja)
+    - Chiquita
+    - Rulo
+    - Bajada
