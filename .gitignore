@@ -175,3 +175,6 @@ cython_debug/
 
 # Also .DS_Store (a hidden Mac file that's best to ignore)
 .DS_Store
+
+data/
+videos/

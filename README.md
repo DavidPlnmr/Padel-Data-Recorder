@@ -12,10 +12,10 @@ pip install -r requirements.txt
 ## Running the app
 To run the app, you can run the following command:
 ```bash
-python gui1.py
+python main.py
 ```
 
-## Features
+## How to work with the app?
 Once executed, a window will open.
 
 At the bottom-left corner, there is a button that allows you to browse your files and select the video of the match you wish to visualize.
@@ -40,3 +40,9 @@ If you make a mistake, you can remove the last entry using the "Remove last even
 Once the rally is finished, stop the video and indicate the winning team by pressing the corresponding button at the bottom-right corner.
 
 Proceed to the next rally.
+
+## Download a YouTube video
+You can also download a video using the following link:
+```bash
+python utils/download_video.py [link of your youtube video]
+```
