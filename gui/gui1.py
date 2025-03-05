@@ -35,15 +35,32 @@ class Gui(QWidget):
         TsearchBtn.setFixedWidth(100)
         TsearchBtn.clicked.connect(self.go_t)
 
+        slowBtn = QPushButton('Slow')
+        slowBtn.clicked.connect(self.slow_mode)
+        normalBtn = QPushButton('Normal')
+        normalBtn.clicked.connect(self.normal_mode)
+        fastBtn = QPushButton('Fast')
+        fastBtn.clicked.connect(self.fast_mode)
+
         h0 = QHBoxLayout()
-        h0.addWidget(openBtn)
-        h0.addWidget(self.Tsearch)
-        h0.addWidget(TsearchBtn)
+        
+        h0.addWidget(slowBtn)
+        h0.addWidget(normalBtn)
+        h0.addWidget(fastBtn)
+
+        h2 = QHBoxLayout()
+
+        h2.addWidget(openBtn)
+        h2.addWidget(self.Tsearch)
+        h2.addWidget(TsearchBtn)
+
 
         # Layout 1 --------------------------------
         vboxLayout1 = QVBoxLayout()
-        vboxLayout1.addWidget(videowidget)
         vboxLayout1.addLayout(h0)
+        vboxLayout1.addWidget(videowidget)
+        
+        vboxLayout1.addLayout(h2)
 
         # Layout 2 ------------------------------
         vboxLayout2 = QVBoxLayout()
@@ -246,6 +263,15 @@ class Gui(QWidget):
             print("El video no es tan largo...")
             print("Duracion :", T)
             self.mediaPlayer.setPosition(T - 5000)
+    
+    def slow_mode(self):
+        self.mediaPlayer.setPlaybackRate(0.5)
+
+    def fast_mode(self):
+        self.mediaPlayer.setPlaybackRate(2)
+
+    def normal_mode(self):
+        self.mediaPlayer.setPlaybackRate(1)
 
     def mousePressEvent(self, event):
         try:
